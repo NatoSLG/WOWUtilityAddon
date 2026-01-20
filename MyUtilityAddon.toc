@@ -1,0 +1,7 @@
+## Interface: 11508
+## Title: My Utility Addon
+## Notes: Buff alerts and stat tracking.
+## SavedVariables: MyAddonStats
+
+BuffTracker.lua
+Stats.lua
