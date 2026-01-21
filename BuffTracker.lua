@@ -29,6 +29,7 @@ local function CreateIcon(index)
     f:SetPoint("LEFT", frame, "LEFT", xOffset, 0)
     
     f:SetAttribute("type", "spell")
+    f:SetAttribute("unit", "player")
     f.tex = f:CreateTexture(nil, "OVERLAY")
     f.tex:SetAllPoints()
     f.tex:SetTexCoord(0.08, 0.92, 0.08, 0.92)
