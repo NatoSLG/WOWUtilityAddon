@@ -61,11 +61,14 @@ frame:SetScript("OnEvent", function(self, event, ...)
     end
 end)
 
+local isJumping = false
 --Tracks jumps
 hooksecurefunc("JumpOrAscendStart", function()
-    if charData then
+    if not IsFalling() and not IsMounted() and not IsSwimming() and charData then
         charData.totalJumps = (charData.totalJumps or 0) + 1
         UpdateUI()
+        isJumping = true
+        C_Timer.After(0.5, function() isJumping = false end)
     end
 end)
 
